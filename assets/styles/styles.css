@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
+  list-style: none;
+  color: #1D1D24;
+  scroll-behavior: smooth;
+}
+
+.upcoming-events {
+  margin-top: 3rem;
+}
+.upcoming-events .upcoming-event-list .list-group {
+  border-bottom: 0;
+}
+.upcoming-events .upcoming-event-list .list-group:nth-child(1) {
+  border-radius: 0.375rem 0.375rem 0 0;
+}
+.upcoming-events .upcoming-event-list .list-group:nth-child(1) li {
+  border-bottom: 0;
+}
+.upcoming-events .upcoming-event-list .list-group:nth-child(2) {
+  border-radius: 0 0 0.375rem 0.375rem;
+}
+.upcoming-events .upcoming-event-list .list-group .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.upcoming-events .upcoming-event-list .list-group .heading .title {
+  font-weight: 500;
+  color: #6F6C0E;
+}
+.upcoming-events .upcoming-event-list .list-group .heading .add-event-btn {
+  height: 40px;
+  width: 40px;
+  background-color: #eee;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.upcoming-events .upcoming-event-list .list-group .heading .add-event-btn:hover {
+  background-color: #e0e0e0;
+}
+.upcoming-events .upcoming-event-list .list-group .heading .add-event-btn i {
+  font-size: 20px;
+  color: #BEBC35;
+}
+.upcoming-events .upcoming-event-list .list-group .list-group-item .no-data {
+  color: #A7A7A7;
+  text-align: center;
+}
+.upcoming-events .upcoming-event-list .list-group .list-group-item .text {
+  color: #A7A7A7;
+}
+.upcoming-events .upcoming-event-list .list-group .list-group-item .text span {
+  margin: 0 6px;
+  color: #A7A7A7;
+}
+.upcoming-events .upcoming-event-list .list-group .list-group-item .text span:nth-child(1) {
+  margin-left: 0;
+}
+.upcoming-events .upcoming-event-list .list-group .others {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+.upcoming-events .upcoming-event-list .list-group .others .popup-option {
+  position: absolute;
+  top: 40px;
+  left: 70%;
+  transform: translateX(-50%);
+  width: 150px;
+  box-shadow: 0 0 10px rgba(29, 29, 36, 0.1);
+  padding: 0 0.8rem;
+  border-radius: 0.375rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 10;
+  background-color: #FFFFFF;
+}
+.upcoming-events .upcoming-event-list .list-group .others .popup-option.active {
+  top: 50px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.upcoming-events .upcoming-event-list .list-group .others .popup-option .eventDone, .upcoming-events .upcoming-event-list .list-group .others .popup-option .eventDelete {
+  padding: 0.6rem 0;
+  color: #5e5e5e;
+  border-bottom: 1px solid #b4b4b4;
+  cursor: pointer;
+}
+.upcoming-events .upcoming-event-list .list-group .others .popup-option .eventDelete {
+  border-bottom: 0;
+}
+.upcoming-events .upcoming-event-list .list-group .done {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #BEBC35;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  margin-right: 5px;
+}
+.upcoming-events .upcoming-event-list .list-group .done.active {
+  opacity: 1;
+}
+.upcoming-events .upcoming-event-list .list-group .done i {
+  color: #FFFFFF;
+}
+.upcoming-events .upcoming-event-list .list-group .option {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.upcoming-events .upcoming-event-list .list-group .option i {
+  color: #6F6C0E;
+  font-size: 24px;
+}
+
+.modal .modal-header {
+  background-color: #BEBC35;
+}
+.modal .modal-header .modal-title {
+  color: #FFFFFF;
+}
+.modal .modal-header i {
+  color: #FFFFFF;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.modal .modal-body .form-label {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.modal .modal-body .form-control {
+  border: none;
+  border-bottom: 1.5px solid #cecece;
+  border-radius: 0;
+}
+.modal .modal-footer {
+  border-top: 0;
+}
+.modal .modal-footer .cancel-btn {
+  border: 1.5px solid #6F6C0E;
+  color: #6F6C0E;
+  background-color: #FFFFFF;
+}
+.modal .modal-footer .save-btn {
+  background-color: #6F6C0E;
+  border: none;
+  margin-left: 1rem;
+}/*# sourceMappingURL=styles.css.map */

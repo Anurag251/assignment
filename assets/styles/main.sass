@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Lato', sans-serif
+  border: none
+  outline: none
+  background: none
+  text-decoration: none
+  list-style: none
+  color: #1D1D24
+  scroll-behavior: smooth
+
+$pri: #BEBC35
+$sec: #6F6C0E
+$bg: #F8F9FC
+// $para: #717173
+$para: #A7A7A7
+$dark: #1D1D24
+$light: #FFFFFF
+
+@mixin flex($justify)
+  display: flex
+  justify-content: $justify
+  align-items: center
+
+@mixin grid($columns)
+  display: grid
+  grid-template-columns: $columns
+  grid-gap: 20px
+
+@mixin trans()
+  transition: all .5s cubic-bezier(0.77, 0, 0.175, 1)

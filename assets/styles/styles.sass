@@ -1,0 +1,146 @@
+@import './main'
+
+.upcoming-events
+  margin-top: 3rem
+
+  .upcoming-event-list
+    .list-group
+      border-bottom: 0
+
+      &:nth-child(1)
+        border-radius: 0.375rem 0.375rem 0 0
+
+        li
+          border-bottom: 0
+
+      &:nth-child(2)
+        border-radius: 0 0 0.375rem 0.375rem
+
+      .heading
+        @include flex($justify: space-between)
+        .title
+          font-weight: 500
+          color: $sec
+
+        .add-event-btn
+          height: 40px
+          width: 40px
+          background-color: #eee
+          border-radius: 50%
+          @include flex($justify: center)
+
+          &:hover
+            background-color: #e0e0e0
+
+          i
+            font-size: 20px
+            color: $pri
+
+      .list-group-item
+        .no-data
+          color: $para
+          text-align: center
+
+        .text
+          color: $para
+
+          span
+            margin: 0 6px
+            color: $para
+
+            &:nth-child(1)
+              margin-left: 0
+
+      .others
+        height: 100%
+        @include flex($justify: flex-end)
+        position: relative
+
+        .popup-option
+          position: absolute
+          top: 40px
+          left: 70%
+          transform: translateX(-50%)
+          width: 150px
+          box-shadow: 0 0 10px rgba($dark, .1)
+          padding: 0 .8rem
+          border-radius: 0.375rem
+          opacity: 0
+          pointer-events: none
+          @include trans()
+          z-index: 10
+          background-color: $light
+
+          &.active
+            top: 50px
+            opacity: 1
+            pointer-events: auto
+
+          .eventDone, .eventDelete
+            padding: .6rem 0
+            color: #5e5e5e
+            border-bottom: 1px solid #b4b4b4
+            cursor: pointer
+
+          .eventDelete
+            border-bottom: 0
+
+      .done
+        height: 25px
+        width: 25px
+        border-radius: 50%
+        background-color: $pri
+        @include flex($justify: center)
+        opacity: 0
+        pointer-events: none
+        margin-right: 5px
+
+        &.active
+          opacity: 1
+
+        i
+          color: $light
+
+      .option
+        cursor: pointer
+        padding: .5rem
+
+        i
+          color: $sec
+          font-size: 24px
+
+.modal
+  .modal-header
+    background-color: $pri
+
+    .modal-title
+      color: $light
+
+    i
+      color: $light
+      background: none
+      font-size: 24px
+      cursor: pointer
+
+  .modal-body
+    .form-label
+      font-size: 14px
+      margin-bottom: 0
+
+    .form-control
+      border: none
+      border-bottom: 1.5px solid #cecece
+      border-radius: 0
+
+  .modal-footer
+    border-top: 0
+
+    .cancel-btn
+      border: 1.5px solid $sec
+      color: $sec
+      background-color: $light
+
+    .save-btn
+      background-color: $sec
+      border: none
+      margin-left: 1rem
